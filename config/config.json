@@ -1,0 +1,40 @@
+{
+  "port": 3050,
+  "mongoose": {
+    "uri": "mongodb://localhost/blogNode",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "MySecr",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": 3600000
+    },
+    "liveAge": 1209600000
+  },
+  "files": {
+    "defaultPath": "/public/files",
+    "mimeTypeLimit": true,
+    "mimeTypeArray": ["image/jpeg", "image/png"],
+    "busboySettings": {
+      "limits": {
+        "fields": 0,
+        "files": 1,
+        "fileSize": 10048576
+      }
+    }
+  },
+  "custom": {
+	"superUserRole": 4,
+    "defaultSuperUserLogin": "admin",
+    "defaultSuperUserPassword": "demo"
+  }
+}

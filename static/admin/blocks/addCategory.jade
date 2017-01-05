@@ -1,0 +1,13 @@
+div.add-category.toggle
+    form(action="/blog/category" method="post").show
+        p header
+        input(type="text" required)
+        p body
+        textarea
+        p title
+        input(type="text" name="title")
+        p description
+        input(type="text" name="description")
+        p parentId
+        input(type="text" name="parentId")
+        input(type="submit" value="add new")

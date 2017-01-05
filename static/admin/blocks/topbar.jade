@@ -1,0 +1,10 @@
+div.topbar
+    if (auth)
+        if (user.role > 0)
+            p Hello admin
+    if menuPanel
+        div.menu.menu-auth
+            ul
+                each href, hrefText in menuAuth
+                    li
+                        a(href="#{href}") #{hrefText}

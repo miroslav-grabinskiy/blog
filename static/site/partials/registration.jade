@@ -1,0 +1,9 @@
+extends ../layouts/layout.jade
+block content
+    if message
+        #{message}
+    div.sign.registration
+        form(action="/registration" method="post")
+            input(type="text" name="login")
+            input(type="password" name="password")
+            input(type="submit" value="registration")
